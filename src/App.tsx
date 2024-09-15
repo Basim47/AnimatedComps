@@ -4,7 +4,7 @@ import {
   NativeStackNavigationProp,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import ChatScreen from './screens/ChatScreen';
 import PinCode from './screens/PinCodeScreen';
@@ -21,7 +21,7 @@ import DoubleListScreen from './screens/DoubleListScreen';
 import Carousel3DScreen from './screens/Carousel3DScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import FloatingButton from './screens/FloatingButtonScreen';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import CustomDrawerScreen from './screens/CustomDrawerScreen';
 import ValuePickersScreen from './screens/ValuePickersScreen';
 import FadeItemListScreen from './screens/FadeItemListScreen';
@@ -32,6 +32,9 @@ import DrawerInterpolateScreen from './screens/DrawerInterpolateScreen';
 import TranslateSearchIOSScreen from './screens/TranslateSearchIOSScreen';
 import CircularProgressBarScreen from './screens/CircularProgressBarScreen';
 import CircularAnimatedTextScreen from './screens/CircularAnimatedTextScreen';
+import BouncyOnboardingScreen from './screens/BouncyOnboardingScreen';
+import Accordians from './screens/Accordians';
+import SwipableRows from './screens/SwipableRows';
 
 type TStackList = {
   Home: undefined;
@@ -59,6 +62,9 @@ type TStackList = {
   CircularAnimatedText: undefined;
   Chat: undefined;
   LineChart: undefined;
+  BouncyOnboardingScreen: undefined;
+  Accordians: undefined;
+  SwipableRows: undefined;
 };
 
 export type THomeNavigationProps = NativeStackNavigationProp<
@@ -71,10 +77,10 @@ const Stack = createNativeStackNavigator<TStackList>();
 
 function App() {
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
         <Stack.Navigator
-          screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
+          screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Parallax" component={ParallaxScreen} />
           <Stack.Screen
@@ -118,6 +124,9 @@ function App() {
           />
           <Stack.Screen name="Chat" component={ChatScreen} />
           <Stack.Screen name="LineChart" component={LineChartScreen} />
+          <Stack.Screen name="BouncyOnboardingScreen" component={BouncyOnboardingScreen} />
+          <Stack.Screen name="Accordians" component={Accordians} />
+          <Stack.Screen name="SwipableRows" component={SwipableRows} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>

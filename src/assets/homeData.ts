@@ -1,4 +1,4 @@
-import {ColorValue} from 'react-native';
+import { ColorValue } from 'react-native';
 
 type TDATA = {
   iconName?: string;
@@ -10,30 +10,33 @@ type TDATA = {
     label: string;
     backgroundColor: string;
     screen:
-      | 'Parallax'
-      | 'DoubleList'
-      | 'Carousel3D'
-      | 'FadeItem'
-      | 'ListWithIndicator'
-      | 'CustomDrawer'
-      | 'DrawerInterpolate'
-      | 'Progress'
-      | 'DotLoader'
-      | 'Togglers'
-      | 'PinCode'
-      | 'Floating'
-      | 'Airbnb'
-      | 'ShutdownIOS'
-      | 'NFCReader'
-      | 'Ticket'
-      | 'TranslateSearchIOS'
-      | 'CircularProgressBar'
-      | 'ValuePickers'
-      | 'LikeInteraction'
-      | 'CircularAnimatedText'
-      | 'Chat'
-      | 'LineChart'
-      | 'ProductList';
+    | 'Parallax'
+    | 'DoubleList'
+    | 'Carousel3D'
+    | 'FadeItem'
+    | 'ListWithIndicator'
+    | 'CustomDrawer'
+    | 'DrawerInterpolate'
+    | 'Progress'
+    | 'DotLoader'
+    | 'Togglers'
+    | 'PinCode'
+    | 'Floating'
+    | 'Airbnb'
+    | 'ShutdownIOS'
+    | 'NFCReader'
+    | 'Ticket'
+    | 'TranslateSearchIOS'
+    | 'CircularProgressBar'
+    | 'ValuePickers'
+    | 'LikeInteraction'
+    | 'CircularAnimatedText'
+    | 'Chat'
+    | 'LineChart'
+    | 'ProductList'
+    | 'BouncyOnboardingScreen'
+    | 'Accordians'
+    | 'SwipableRows';
   }[];
 }[];
 
@@ -75,6 +78,16 @@ export const DATA: TDATA = [
         backgroundColor: '#95e214',
         screen: 'CircularAnimatedText',
       },
+      {
+        label: 'Bouncy Onboarding Screen',
+        backgroundColor: '#0ad2ff',
+        screen: 'BouncyOnboardingScreen',
+      },
+      {
+        label: 'Swipable Rows',
+        backgroundColor: '#2962ff',
+        screen: 'SwipableRows',
+      },
     ],
   },
   {
@@ -113,6 +126,11 @@ export const DATA: TDATA = [
         label: 'Product List',
         backgroundColor: '#95e214',
         screen: 'ProductList',
+      },
+      {
+        label: 'Accordians',
+        backgroundColor: '#0ad2ff',
+        screen: 'Accordians',
       },
     ],
   },
